@@ -7,7 +7,7 @@
 #     
 #     ['a', 'b', 'A', 'B'].natural_sort              #=> ['A', 'a', 'B', 'b']
 module NaturalSort
-  VERSION = '1.2.0'
+  VERSION = '1.2.1'
 
   # call-seq:
   #    NaturalSort::naturalsort(object)                     => array
