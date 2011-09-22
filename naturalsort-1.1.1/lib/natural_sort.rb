@@ -19,8 +19,12 @@ module NaturalSort
   # 
   # <tt>object</tt> can by any object that has to_a method.
   def self.naturalsort(object)
+    naturalsortby(object) { |o| o.to_s }
+  end
+
+  def self.naturalsortby(object, &block)
     sorted = object.to_a.sort do |a,b|
-      sa, sb = a.to_s, b.to_s
+      sa, sb = block.call(a), block.call(b)
       if ((sa.downcase <=> sb.downcase) == 0) then sa <=> sb
       else
         na, nb = check_regexp(sa, sb)
@@ -46,6 +50,10 @@ module NaturalSort
   # Enumerable , Array, Range, Set, Hash
   def natural_sort
     NaturalSort::naturalsort(to_a)
+  end
+
+  def natural_sort_by(&block)
+    NaturalSort::naturalsortby(to_a, &block)
   end
 
   private

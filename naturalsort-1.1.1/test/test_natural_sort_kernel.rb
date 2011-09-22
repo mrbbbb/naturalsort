@@ -106,4 +106,12 @@ class TestNaturalSortKernel < Test::Unit::TestCase
     def test_complex
       assert_equal NaturalSort::ComplexSorted, NaturalSort::Complex.natural_sort
     end
+
+    def test_natural_sort_by
+      require 'ostruct'
+      b1 = OpenStruct.new(:name => "b1")
+      b11 = OpenStruct.new(:name => "b11")
+      b2 = OpenStruct.new(:name => "b2")
+      assert_equal [b1, b2, b11], [b1, b11, b2].natural_sort_by { |object| object.name }
+    end
 end
