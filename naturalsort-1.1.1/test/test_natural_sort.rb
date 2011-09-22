@@ -42,4 +42,14 @@ class TestNaturalSort < Test::Unit::TestCase
     obj = MyClass.new ['a1', 'a12', 'a11', 'a2', 'a10', 'a3', 'a21', 'a29']
     assert_equal ['a1', 'a2', 'a3', 'a10', 'a11', 'a12', 'a21', 'a29'], obj.natural_sort
   end
+
+  def test_first_no_number
+    obj = MyClass.new ['aaa2', 'aaa3', 'aaa4', 'aaa']
+    assert_equal ['aaa', 'aaa2', 'aaa3', 'aaa4'], obj.natural_sort
+  end
+
+  def test_number_leading_zero
+    obj = MyClass.new ["A001", "A08", "A007", "A003", "A011", "A20", "A200"]
+    assert_equal ["A001", "A003", "A007", "A08", "A011", "A20", "A200"], obj.natural_sort
+  end
 end

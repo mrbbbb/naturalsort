@@ -4,7 +4,7 @@ require 'rubygems'
 require 'hoe'
 require './lib/natural_sort.rb'
 
-Hoe.spec('naturalsort', NaturalSort::VERSION) do |p|
+Hoe.new('naturalsort', NaturalSort::VERSION) do |p|
   p.rubyforge_name = 'naturalsort'
   p.author = 'Benjamin Francisoud'
   p.email = 'pub.cog@gmail.com'

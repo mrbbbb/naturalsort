@@ -1,6 +1,5 @@
 NaturalSort
-  by Benjamin Francisoud
-  http://benjamin.francisoud.googlepages.com
+http://naturalsort.rubyforge.org/
 
 == Description:
   
@@ -12,14 +11,17 @@ It's sometimes call:
 * alphanum sort
 
 Examples: 
-  ['a1', 'a11', 'a12', 'a2', 'a21'] => ['a1', 'a2', 'a11', 'a12','a21']
-  ['a', 'b', 'c', 'A', 'B', 'C']    => ['A', 'a', 'B', 'b', 'C', 'c']
-  ['x__2', 'x_1']                   => ['x_1', 'x__2']
+  ['a1', 'a11', 'a12', 'a2', 'a21']       => ['a1', 'a2', 'a11', 'a12','a21']
+  ['a', 'b', 'c', 'A', 'B', 'C']          => ['A', 'a', 'B', 'b', 'C', 'c']
+  ['x__2', 'x_1']                         => ['x_1', 'x__2']
+  ['x2-y08', 'x2-g8', 'x2-y7', 'x8-y8']   => ['x2-g8', 'x2-y7', 'x2-y08', 'x8-y8']
+* ['x02-y08', 'x02-g8', 'x2-y7', 'x8-y8'] => ['x02-g8', 'x2-y7', 'x02-y08', 'x8-y8']
 
 == Features:
   
 * sort case insensitive
 * sort filename matching pattern "abc1", "abc12", "abc2" in the correct order
+* sort filename matching pattern "a1b2"
 * sort underscore insensitive
 
 == Install:
@@ -45,7 +47,7 @@ Add natural sort methods to ruby default object (Array, Hash, etc...)
 == About
 
 * Rubyforge project page http://rubyforge.org/projects/naturalsort
-* Author: Benjamin Francisoud http://benjamin.francisoud.googlepages.com
+* Author: Benjamin Francisoud http://www.google.com/profiles/benjamin.francisoud
 
 == Related Links
 
